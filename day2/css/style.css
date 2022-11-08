@@ -1,0 +1,34 @@
+.container {
+    /*dat container ra giua man hinh*/
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: salmon;
+}
+.heading {
+    color: rgb(32, 68, 167);
+    background-color: rgb(219, 231, 229);
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 4px;
+    text-decoration-color: rgb(228, 161, 18);
+
+    text-decoration: solid underline 3px rgb(77, 52, 219);
+    text-shadow: 3px 3px blanchedalmond;
+}
+
+p.uppercase {
+    text-transform: uppercase;
+    text-indent: 100px;
+}   
+/*chỉ ap dung khi con tro chuot di chuyen vao*/
+.heading:hover {
+    color: rgb(231, 61, 31);
+}   
+
+.heading {
+    width: 500px;   
+    height: 300px;
+    background-image: url(../image/anh-dep-thien-nhien-3.jpg);
+}
