@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy tắc đặt tên theo chuẩn BEM</title>
+</head>
+<h1>BEM là gì? Quy ước đặt tên dành cho CSS/h1>
+<body>
+<h2>BEM là gì?</h2>
+<p>BEM là viết tắt của Block-Element-Modifier, là một tiêu chuẩn quy ước đặt tên cho các tên lớp CSS. BEM giúp cho việc code Frontend dễ đọc và dễ hiểu hơn, dễ làm việc và dễ mở rộng cũng như bảo trì khi làm việc với CSS.</p>
+<p>Việc đặt tên theo chuẩn giúp các lập trình viên frontend hiểu được đoạn code đó có ý nghĩa gì, nó thực hiện nhiệm vụ gì. Từ đó những lập trình viên khác khi đọc vào code của bạn họ cũng hiểu được bạn đang làm gì, từ đó dễ dàng phân tích, thay đổi và quản lý hơn sau này.</p>    
+<h3>Tại sao nên sử dụng BEM?</h3>
+<p>Trong những dự án nhỏ có thể BEM chưa cần sử dụng nhưng trong các dự án lớn và làm việc với nhóm thì BEM rất quan trọng.</p>
+<ul>
+    <li>BEM giúp cho cả team làm việc với nhau dễ dàng: Khi làm Teamwork với nhau, mỗi người sẽ có một cách đặt tên class riêng và sẽ bị conflict với nhau. Sử dụng BEM sẽ loại bỏ vấn đề này, vì có cấu trúc rõ ràng và dễ tuân thủ khi sử dụng.</li>
+    <li>Modules: Các class của mỗi block sẽ không bị ảnh hưởng bởi các yếu tố khác, nên bạn sẽ không lo CSS của class này sẽ gây ảnh hưởng lên class khác.</li>
+    <li>Tái sử dụng lại: Bạn có thể soạn các block độc lập với nhau và sử dụng lại chúng một cách thuận tiện, giảm số lượng code CSS.</li>
+    <li>Cấu trúc: BEM cung cấp cho CSS của bạn một cấu trúc vững chắc, đơn giản và dễ hiểu.</li>
+</ul>
+<h4>Những thành phần cơ bản của BEM</h4>
+<p>Quy ước đặt tên</p>
+<div class="Example" >
+    <p><code>.block {}</code>   /* Block */
+        <code>.block__element {}</code>  /* Element */
+        <code>.block--modifier {}</code>  /* Modifier */
+    </p>
+    <img src="https://topdev.vn/blog/wp-content/uploads/2019/04/bem-la-gi.jpeg" alt="bem-la-gi">
+</div>
+
+<div>
+    <p><strong>1. Block:</strong> Là một thành phần của trang web hay ứng dụng đó, các thành phần của DOM cũng có thể là các block. Block ở đây thường là các thành phần header, body, content, footer. Ví dụ section td bên dưới tập hợp các block sau:</p>
+    <ul>
+        <li><code>.td__container</code> làm nhiệm vụ cân max width và padding left right</li>
+        <li><code>.td__inner</code> làm nhiệm vụ cân padding top bottom và điểm bám cho các element absolute. VD: chỉnh một button…</li>
+        <li><code>.td__header</code> chứa Sub-title.</li>
+        <li><code>.td__content</code> chứa Headline và Description.</li>
+        <li><code>.td__footer</code> chứa button CTA.</li>
+    </ul>
+    <p>Các prefix của các class đều là td giúp chúng ta có thể nhận diện section khi muốn update mục tương ứng trong css.</p>
+</div>
+
+<div>
+    <p><strong>2. Elements:</strong> Là một thành phần của một block và sẽ không tồn tại độc lập mà không có block vì được đặt bên trong nó, và chúng phụ thuộc vào parent block của nó. Trong BEM, các phần tử được biểu thị bằng dấu gạch dưới kép __.</p>
+    <ul>
+        <li><code>.td__headlin</code>e là Text cỡ lớn. Style thường là H1 hoặc H2.</li>
+        <li><code>.td__intro</code>, <code>.td__description</code> làm mô tả content.</li>
+        <li>.td__image chứa ảnh.</li>
+        <li><code>.td__button</code> với style riêng cho button trong section này.</li>
+    </ul>
+</div>
+
+<div>
+    <p><strong>3. Modifers:</strong> Được dùng để thao tác thay đổi cách hiển thị trên block hoặc phần tử. Ví dụ mình muốn tạo thêm một block <code>.block__elem</code> khác nữa và muốn làm nổi bật nó thì sẽ thêm một class <code>.block__elem--hightlight</code> để tạo sự khác biệt đó. Ví dụ:</p>
+    <ul>
+        <li>Khi bắt đầu 1 porject chúng ta cần xem rõ guide và style những component dùng chung để có thể tái sử dụng được và tồn tại độc lập với các component khác. Chúng ta hãy xem các component của bootstrap một ví dụ tốt về component.</li>
+        <li>Tên selector của component thì đặt là namespace</li>
+        <li>Không được đặt một class con như sau: <code>.block__parent__eye</code> mà thay vào đó để miêu tả mỗi quan hệ giữa các khối và phần tử với nhau như sau <code>.block__parent--eye</code>.</li>
+        <li>Duy trì tính modules</li>
+        <li>Tránh sử dụng để viết CSS cho id, cụ thể là những trường hợp ưu tiên trong CSS.</li>
+    <code></ul></code>
+</div>
+</body>
+</html>

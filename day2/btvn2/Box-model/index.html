@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model là gì</title>
+</head>
+<h1>BOX MODEL VÀ CÁC THUỘC TÍNH</h1>
+<body>
+<div>
+    <p>Box Model là một kỹ thuật cơ bản nhất trong CSS Layout và được sử dụng để bạn mô tả về khoảng cách mà mỗi phần tử trên website được sở hữu, hay nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị cho mỗi phần tử trên website.</p>
+    <p>Kỹ thuật Box Model trong CSS bao gồm 4 phần quan trọng đó là:</p>
+    <ul>
+        <li>Margin: Khoảng cách tính từ bên ngoài của phần tử.</li>
+        <li>Border: Đường viền của phần tử.</li>
+        <li>Padding: Khoảng cách tính từ bên trong của phần tử.</li>
+        <li>Content: Nội dung trong phần tử.</li>
+    </ul>
+</div>
+
+<div>
+    <p>4 phần này chúng ta có hình ảnh như sau:</p>
+    <img src="https://thachpham.com/wp-content/uploads/2015/04/box-model.gif" alt="box-model">
+</div>
+
+<div>
+    <p>Và trong 4 thành phần trên thì phần content chúng ta sẽ không có thuộc tính CSS nào đại diện cả vì nó là nội dung trong phần tử. Còn 3 phần còn lại thì sẽ có các thuộc tính CSS đại diện như sau:</p>
+    <ul>
+        <li>margin: top right bottom left;</li>
+        <li>border: top right bottom left;</li>
+        <li>padding: top right bottom left;</li>
+    </ul>
+    <p>Cách sử dụng:</p>
+    <h1>Padding</h1>
+    <p>Padding nghĩa là chúng ta sẽ thiết lập khoảng cách được tính từ phần Content trở ra viền của phần tử, đơn giản vậy thôi. Padding được khai báo trong CSS bởi thuộc tính padding với giá trị theo tuần tự top right bottom left (trên > phải > dưới > trái) và giá trị là số kèm theo đơn vị đo lường.</p>
+</div>    
+<div>
+    <h1>Border</h1>
+    <p>Border nghĩa là thuộc tính để bạn tạo viền cho phần tử và nó sẽ được khai báo bằng thuộc tính border trong CSS.</p>
+    <p>cấu trúc:</p>
+    <p>border: [size] [type] [color];</p>
+    <p>Ví dụ:</p>
+    <p>border: 1px solid red;</p>
+    <p>Trong border có hỗ trợ một số type nhưsolid,dotted, double,groove,ridge, inset vàoutset. Giống như các thẻ trong Box Model khác, border cũng có các thẻ con là border-top, border-right, border-bottom và border-left.</p>
+</div>
+
+<div>
+    <h1>Margin</h1>
+    <p>Trong khi Padding có nhiệm vụ tạo khoảng cách giữa phần Content với Border thì Margin sẽ có tác dụng tạo khoảng cách từ Border trở ra ngoài, nói dễ hiểu thì nó sẽ giúp bạn tinh chỉnh khoảng cách giữa các phần tử với nhau. </p>
+</div>
+
+</body>
+</html>

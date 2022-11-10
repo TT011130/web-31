@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade-Specialty-Inheritance</title>
+</head>
+<body>
+<div>
+        <h1>Inheritance</h1>
+        <p>Trong CSS, một số kiểu được kế thừa trong cây tài liệu HTML trong khi những kiểu khác thì không.
+
+            Mặc dù điều này có thể gây nhầm lẫn, nhưng nguyên tắc đằng sau nó thực sự được thiết kế để cho phép bạn viết ít quy tắc CSS hơn.</p>
+</div>
+
+<div>
+        <h2>Kiểu kế thừa</h2>
+        <p>Các kiểu được kế thừa thường liên quan đến kiểu văn bản của tài liệu.</p>
+        <p>Thuộc tính phông chữ được kế thừa. Đây là lý do tại sao chúng tôi sử dụng phần tử <body> để đính kèm các kiểu phông chữ của chúng tôi.</p>
+        <p>Phần tử body trong HTML của chúng tôi là tổ tiên của tất cả các phần tử HTML hiển thị khác của chúng tôi. Đặt thuộc tính phông chữ trên phần tử body cho phép phần còn lại của tài liệu kế thừa kiểu phông chữ.</p>
+        <p>Ví dụ:</p>
+        <p>body {
+            font: 1em/1.4 Helvetica, Verdana, sans-serif;
+         }</p>
+</div>
+
+<div>
+        <h3>Kiểu không được kế thừa</h3>
+        <p>Phong cách không được kế thừa thường liên quan đến sự xuất hiện của các phần tử.</p>
+        
+</div>
+<div>
+    <h1>Tính đặc hiệu</h1>
+    <p>Các quy tắc CSS thường xung đột với nhau. Trong thực tế, đây là những gì chúng tôi muốn. Bí quyết là hiểu các quy tắc xung đột sẽ được áp dụng như thế nào.</p>
+    <p>Tính cụ thể là một trong những cách mà các quy tắc xung đột được áp dụng.</p>
+    <p>Các bộ chọn có các giá trị tầm quan trọng (hoặc tính cụ thể) khác nhau. Đây là danh sách ngắn (được liệt kê theo thứ tự quan trọng):</p>
+    <ol>
+        <li>bộ chọn id</li>
+        <li>bộ chọn lớp và lớp giả</li>
+        <li>bộ chọn phần tử</li>
+    </ol>
+    <p>Nếu nhiều quy tắc CSS xung đột với nhau, bộ chọn cụ thể hoặc quan trọng nhất sẽ được áp dụng.</p>
+</div>
+
+<div>
+    <h1>Cascade</h1>
+    <p>Chúng ta đã nói về cách có thể có nhiều nguồn kiểu CSS khác nhau. Làm thế nào để chúng tôi biết cái nào sẽ được sử dụng?</p>
+    <p>Trong CSS, các biểu định kiểu xếp tầng theo thứ tự quan trọng. Nếu các quy tắc trong các biểu định kiểu khác nhau xung đột và chúng có cùng mức độ cụ thể, thì quy tắc từ biểu định kiểu quan trọng nhất sẽ thắng.</p>
+    <p>Dưới đây là danh sách các nguồn có thể có của quy tắc CSS. Chúng được liệt kê theo thứ tự quan trọng. Là người tạo ra style sheet, bạn là tác giả .</p>
+    <ol>
+        <li>Các kiểu nội tuyến của tác giả</li>
+        <li>Kiểu nhúng của tác giả (hay còn gọi là: trang định kiểu nội bộ</li>
+        <li>Tác giả trang định kiểu bên ngoài</li>
+        <li>Bảng kiểu người dùng</li>
+        <li>Biểu định kiểu mặc định của trình duyệt</li>
+    </ol>
+</div>
+    
+</body>
+</html>
