@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về flexbox</title>
+</head>
+<body>
+    <h1>Tìm hiểu về flexbox</h1>
+
+    <div>
+        <h2>Flexbox là gì?</h2>
+        <p>
+            Flexbox(Flexible box) là một module của CSS giúp bạn dễ thở hơn trong việc chia bố trí, căn chỉnh và phân chia các khoảng
+            trống của các items trong một container, đặc biệt là trong những trường hợp không biết trước về kích thước container hoặc kích thước container có thể thay đổi.
+        </p>
+        <p>Một flexbox layout bao gồm một phần tử cha với một hoặc nhiều phần tử con. Phần tử cha dược xem là một container và các phần tử con là item.</p>
+        <img src="images/flex-box.png" alt="flex-box">
+    </div>
+
+    <h2>Các thuộc tính của container:</h2>
+
+    <div>
+        <h3><strong>display: flex;</strong></h3>
+        <p>Container được hiểu nôm na là vật chứa hay phần tử cha và có chứa các phần tử ở phía trong. Container được định nghĩa bằng thuộc tính display: flex;.</p>
+        <p>Ví dụ:</p>
+        <p>.container {
+            display: flex;
+            }
+        </p>
+    </div>
+
+    <div>
+        <h3><strong>flex-direction: row | row-reverse | column | column-reverse;</strong></h3>
+        <p>row(mặc định): Hiển thị các item từ trái qua phải.</p>
+        <p>row-reverse: Hiển thị các item theo thứ tự từ phải qua trái.</p>
+        <p>column: Hiển thị tất cả item từ trên xuống dưới.</p>
+        <p>column-reverse: Hiển thị tất cả item từ dưới lên trên.</p>
+        <img src="images/flex-direction.png" alt="flex-direction">
+    </div>
+    <div>
+    <h3>flex-wrap: no-wrap | wrap | wrap-reverse;</h3>
+    <p>no-wrap(mặc định): Toàn bộ item sẽ nằm trên một hàng hoặc một cột.</p>
+    <p>wrap: Các item có thể chia thành nhiều hàng nếu không đủ diện tích với chiều là chiều của flex-direction.</p>
+    <p>wrap-reverse: Các item có thể chia thành nhiều hàng nếu không đủ diện tích với chiều là chiều ngược với flex-direction.</p>
+    </div>
+
+    <div>
+        <h3>flex-flow: &lt;&apos;flex-direction&apos;&gt; || &lt;&apos;flex-wrap&apos;&gt;;</h3>
+        <p>Đây là cách viết rút gọn của flex-direction và flex-wrap. Ví dụ như:</p>
+        <p style="white-space: pre-wrap;">.container {
+            flex-direction: column;
+            flex-wrap: wrap-rerverse;
+            }
+        </p>
+        <p style="white-space: pre-wrap;">.container {
+            flex-flow: column wrap-reverse;
+            }
+        </p>
+    </div>
+
+    <div>
+        <h3>justify-content: flex-start | center | flex-end | space-between | space-around | space-evenly;</h3>
+        <p>Justify content định nghĩa về sự căn chỉnh các items trong container so với trục chính</p>
+        <p>flex start: Toàn bộ items căn về điểm bắt đầu của trục chính.</p>
+        <p>flex-end: Toàn bộ items căn về điểm kết thúc của trục chính.</p>
+        <p>center: Toàn bộ items căn giữa của trục chính.</p>
+        <p>space-between: Toàn bộ items được bố trí đều nhau trên trục chính, item đầu tiên nằm ở điểm bắt đầu của trục, item cuối cùng nằm ở điểm cuối cùng của trục</p>
+        <p>space-around: Toàn bộ items được bố trí đều nhau với các khoảng trống xung quanh mỗi item đều giống nhau.</p>
+        <p>space-evenly: Toàn bộ items được bố trí với khoảng trống giữa mỗi 2 item là bằng nhau.</p>
+    </div>
+
+    <div>
+        <h3>align-items: flex-start | center | flex-end | baseline | stretch;</h3>
+        <p>Justify content giúp chúng ta căn chỉnh các items trên trục chính thì align-items giúp chúng ta căn chỉnh các items theo trục đối xứng).</p>
+        <p>flex start: Toàn bộ items căn về điểm bắt đầu của trục đối xứng.</p>
+        <p>flex-end: Toàn bộ items căn về điểm kết thúc của trục đối xứng.</p>
+        <p>center: Toàn bộ items căn về điểm giữa của trục đối xứng.</p>
+        <p>baseline: Toàn bộ items được căn chỉnh theo một đường cơ sở.</p>
+        <p>stretch: Toàn bộ items sẽ giãn ra và phủ kín container.</p>
+    </div>
+
+    <div>
+        <h3>align-content: flex-start | center | flex-end | space-between | space-around | stretch;</h3>
+        <p>Nếu trong container có nhiều hàng items, thuộc tính này sẽ có tác dụng tương tự như justify-content nhưng nó sẽ chia khoảng trống giữa các hàng trên trục đối xứng.</p>
+        <p>flex start: Các hàng dồn về điểm bắt đầu của trục đối xứng.</p>
+        <p>flex-end: Các hàng dồn về điểm kết thúc của trục đối xứng.</p>
+        <p>center: Các hàng dồn về giữa của trục đối xứng.</p>
+        <p>space-between: Hàng đầu tiên ở điểm bắt đầu và hàng cuối cùng ở điểm kết thúc của trục đối xứng. Các hàng còn lại sẽ chia đều khoảng cách.</p>
+        <p>space-around: Khoảng cách giữa các hàng bằng nhau.</p>
+        <p>stretch: Đây là giá trị mặc định. Các hàng sẽ giãn ra để lấp đầy container.</p>
+    </div>
+
+</body>
+</html>
