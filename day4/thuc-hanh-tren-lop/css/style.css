@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+
+.container {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list-anime-news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    gap: 20px;
+}
+
+.thumbnail {
+    width: 300px;
+}
+
+
+
+
+
