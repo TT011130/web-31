@@ -38,6 +38,10 @@ body, html {
     cursor: pointer;
 }
 
+.post a{
+    text-decoration: none;
+}
+
 .thumbnail img {
     height: 221.188px;
     border-top-left-radius: 4px;
