@@ -23,7 +23,7 @@ body, html {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 30px;
-    margin-left: 600px;
+    margin-left: 200px;
     margin-top: 150px;
     margin-bottom: 15px;
 }
