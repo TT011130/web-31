@@ -1,0 +1,111 @@
+.movie-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 320px;
+    position: relative;
+}
+
+.movie-btn-play,
+.movie-content {
+    position: absolute;
+}
+
+.movie-btn-play {
+    top: 10px;
+    left: 10px;
+}
+
+.movie-content {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 15px 10px;
+    background-image: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.9)
+    );
+    color: #eee;
+}
+
+.movie-title {
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+
+.movie-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.movie:hover .movie-btn-play {
+    display: flex;
+}
+
+.movie-btn-play {
+    /* Ban đầu  ẩn */
+    display: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav .container {
+    display: flex;
+}
+
+.nav-link, .nav-dropdown-button {
+    display: block;
+    padding: 8px 16px;
+    background-color: rgb(28, 78, 240);
+    text-transform: uppercase;
+    color: cornsilk;
+}
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    background-color: #ffffff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.nav-dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 16px;
+}
+
+.nav-link:hover, .nav-dropdown:hover .dropdown-button {
+    background-color: royalblue;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(67, 111, 255);
+}

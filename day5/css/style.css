@@ -1,0 +1,75 @@
+.box {
+ width: 200px;
+ height: 200px;
+}
+
+.box.static {
+    background-color: blue;
+
+}
+
+.box.relative {
+    background-color: green;
+
+    /*Mặc định tất cả giá trị khác static sẽ nằm trên layer cao hơn và che phủ các phần tử static*/
+    /*Việc sử dụng relative thì không ảnh hưởng đến vị trí của những phần tử xung quang*/
+    /*Chỉ áp dụng được 2/4 thuộc tính và thường theo 1 góc cụ thể*/
+    /*Thực tế relative không phải để dịch chuyển vị tri 
+    phần tử mà sử dụng để làm mốc căn chỉnh cho các phần tử con là absolute*/
+    /*Trường hợp dịch chuyển phần tử thì dùng translate thay thế*/
+    position: relative;
+    
+}
+
+.box.absolute {
+    /*Khi sử dụng absolute thì các phần tử xung quanh sẽ bị ảnh hưởng*/
+    /*Khi mà absolute không nằm trong bất kỳ thẻ cha nào có 
+    position khác static thì sẽ căn theo khung nhìn (viewport)-khung trình duyệt*/
+    /*Căn theo phần tử cha gần nhất có position khác static*/
+    /*Có thẻ áp dụng đồng thời cả 4 thuộc tính top left right bottom-hữu ích 
+    trong trường hợp tạo lớp phủ màn hình/phần tử (chỉ áp dụng được khi không set kích thước*/
+    background-color: blueviolet;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.box.absolute.overlay {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+}
+.box.relative:hover .box.absolute.overlay {
+    /*hiển thị overlay khi di chyootj vào phần tử cha*/
+    display: block;
+}
+
+
+.box.fixed {
+    background-color: darkkhaki;
+    /*Ảnh hưởng đến các phần tử xung quanh*/
+    /*Căn chỉnh theo khung trình duyệt*/
+    /*Có thể áp dụng đồng thời 4 thuộc tính - tạo lớp phủ toàn bộ màn hình*/
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    
+}
+
+/*Sticky*/
+/*Cần có 1 container có chiều cao cụ thể*/
+/*Cho phep 1 phần tử có vị trí linh hoạt trên trang*/
+.container {
+    height: 1000px;
+    background-color: darkorange;
+}
+
+.box.sticky {
+    background-color: darkseagreen;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
