@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về positioning</title>
+</head>
+<body>
+    <h1>Position trong CSS là gì?</h1>
+    <p><strong>Position trong CSS</strong> được sử dụng để định vị 
+    vị trí hiển thị của các phần tử thẻ HTML và thường sử dụng để xây dựng CSS cho menu nhiều cấp, tooltip và một số chức năng khác liên quan đến vị trí.</p>
+    <br>
+    <h2>Các vị trí trong Position</h2>
+    <p>Các vị trí trên 1 mặt phẳng như bạn đã biết bao gồm 4 vị trí chính: trên, dưới, trái, phải tương ứng ta sẽ có các vị trí Position như sau:</p>
+    <ul>
+        <li><strong>Top – trên</strong></li>
+        <li><strong>Bottom – dưới</strong></li>
+        <li><strong>Left – trái</strong></li>
+        <li><strong>Right – phải</strong></li>
+    </ul>
+    <div>
+        <img src="images/top-right-bottom-left.png" alt="top-right-bottom-left">
+    </div>
+        <p>Tất nhiên, đây chỉ là những vị trí cơ bản nhất,
+         khi thực hiện 1 layout, bạn sẽ phải căng chỉnh vị trí nhiều hơn nhiều bằng cách kết hợp cùng các thuộc tính Position trong CSS khác ví dụ như trong ảnh:</p>
+    
+    <div>
+        <img src="images/detailed-position.png" alt="detailed-position">
+    </div>
+    <h2>5 giá trị thuộc tính cơ bản của Position trong CSS</h2>
+    <p>Thông thường chúng ta sẽ có 4 thuộc tính chính bao gồm: static, relative, fixed và absolute.
+    Ngoài ra còn có các thuộc tính như: sticky và 2 thuộc tính khá thú vị khác là initial, inherit.</p>
+
+    <ul>
+        <li><strong>Position static:</strong> vị trí/tĩnh mặc định của phần tử và bạn đặt đâu phần tử sẽ nằm ở đó.</li>
+        <li><strong>Position relative:</strong> vị trí của phần tử sẽ tương đối so với vị trí tĩnh bạn đặt và khoản không gian xung quanh phần tử sẽ được giữ nguyên.</li>
+        <li><strong>Position fixed:</strong> vị trí sẽ nằm cố định một chỗ, dù bạn có làm gì, phần tử vẫn nằm cố định 1 vị trí trên màn hình.</li>
+        <li><strong>Position absolute:</strong> vị trí của phần tử sẽ được xác định từ padding của phần tử cha.</li>
+        <li><strong>Position sticky:</strong> vị trí của phần tử sẽ được định vị khi người dùng sử dụng thanh cuộn.</li>
+    </ul>
+    <br>
+
+    <h1>Giải thích chi tiết các giá trị thuộc tính của Position trong CSS</h1>
+    <h2>Position static</h2>
+    <p>Position static hay vị trí mặc định, đồng nghĩa với việc vị trí của phần tử này được xác định theo quy tắc thông thường của các tài liệu.</p>
+    <p>Không thể sử dụng các thuộc tính CSS như: Top, Bottom, Left, Right để thiết lập vị trí cho phần tử đó.</p>
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">&lt;div style=”position:static; border:1px solid; padding:5px;”&gt;
+
+        This div element has {position: static};
+        
+        &lt;/div&gt;
+        
+        &lt;br&gt;
+        
+        &lt;h3>CSS {position:static; left: 50px;}&lt;/h3&gt;
+        
+        &lt;div style=”position:static; left: 50px;”&gt;
+        
+        This div element has {position: static} and {left: 50px}
+        
+        &lt;/div&gt;
+    </p>
+
+    <h2>Position relative</h2>
+    <p>Phần tử được định vị bằng Position relative sẽ nằm ở vị trí tương đối so với vị trí static.
+    Có thể sử dụng các CSS như: <strong>Top, Bottom, Left, Right</strong> để định vị vị trí của phần tử đó.</p>
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+        &lt;h3>{position: relative;}&lt;/h3&gt;
+
+        &lt;div style=”position: relative; width:250px;”&gt;
+
+        position: relative; width:250px;
+
+        &lt;/div&gt;
+
+        &lt;br&gt;
+
+        &lt;h3&gt;{position: relative; left:50px; top:50px;}&lt;/h3&gt;
+
+        &lt;div style=”position: relative; left:50px; top:50px; width:250px;”&gt;
+
+        position: relative; width:250px; &lt;br/&gt;
+
+        left:50px; top:50px;
+
+        &lt;/div&gt;
+    </p>
+    <br>
+
+    <h2>Position fixed</h2>
+    <p>Phần tử được định vị bằng Position fixed sẽ có vị trí tương đối so với Viewport trên trình duyệt.</p>
+    <img src="images/position-fixed.png" alt="position-fixed">
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+        &lt;!DOCTYPE html&gt;
+
+        &lt;html&gt;
+
+        &lt;head&gt;
+
+        &lt;meta charset=”utf-8″/&gt;
+
+        &lt;title>CSS Position&lt;/title&gt;
+
+        &lt;style&gt;
+
+        div {
+
+        background-color:yellow;
+
+        padding: 5px;
+
+        }
+
+        &lt;/style&gt;
+
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+        &lt;h2>{position: fixed}&lt;/h2&gt;
+
+        &lt;div style=”position:fixed; bottom:20px; right:15px;”&gt;
+
+        position:fixed; bottom:20px; right:15px;
+
+        &lt;/div&gt;
+
+        &lt;p>Content .. 1&lt;/p&gt;
+
+        &lt;p>Content .. 2&lt;/p&gt;
+
+        &lt;p>Content .. 3&lt;/&lt;p&gt;
+
+        &lt;p>Content .. 4&lt;/p&gt;
+
+        &lt;p>Content .. 5&lt;/p&gt;
+
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+    </p>
+    <br>
+    <img src="images/position-fixed-example.png" alt="position-fixed-example">
+    <br>
+    <p>Bạn có thể thu nhỏ cửa sổ trình duyệt của mình lại và kéo phóng to thu nhỏ, bạn sẽ thấy phần tử màu vàng sẽ thay đổi vị trí theo cách bạn thu phóng cửa sổ trình duyệt. 
+        Một cách nói khác: bạn đang thực hiện neo cố định 4 cạnh của phần tử với 4 cạnh của trình duyệt bằng dòng code</p>
+    <p style="white-space: pre-wrap;">
+        &lt;div style=”position:fixed; bottom:20px; right:15px;”&gt;
+
+        position:fixed; bottom:20px; right:15px;
+        
+        &lt;/div&gt;
+    </p>
+
+    <h2>Position absolute</h2>
+    <p>Đối với một phần tử được định vị bằng Position absolute, phần tử sẽ tự động ưu tiên cho phần tử cha, ông gần nhất của chúng có chứa Position relative. 
+        Khi tìm thấy phần tử chứa Position relative, phần tử được định vị bằng Position absolute sẽ tự động tạo vị trí tương đối so với phần tử đó. 
+        Nếu không, phần tử định vị bằng Position absolute sẽ lấy vị trí tương đối so với Viewport trên trình duyệt của bạn.
+    </p>
+    <img src="images/position-absolute.png" alt="position-absolute">
+    <br>
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+        &lt;!DOCTYPE html&gt;
+
+        &lt;html&gt;
+
+        &lt;head&gt;
+
+        &lt;meta charset=”utf-8″/&gt;
+        &lt;title>CSS Position&lt;/title&gt;
+
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+        &lt;h2 class=”mb-3″>CSS {position:absolute}&lt;/h2&gt;
+
+        &lt;div style=”position:relative; height:200px;border:1px solid red;”&gt;
+
+        Im a div {position:relative} (red).
+
+        &lt;div style=”border:1px solid green;”&gt;
+
+        Im a normal div (green).
+
+        &lt;div style=”position: absolute; bottom:10px; right:15px; background:yellow;”&gt;
+
+        position: absolute; bottom:10px; right:15px;
+
+        &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+    </p>
+    <br>
+    <img src="images/position-fixed-example.png" alt="position-absolute-example">
+    <br>
+    <p>Khi bạn để nguyên phần tử màu vàng sẽ thiết lập vị trí tương đối so với phần tử cha mau đỏ. 
+        Đến khi bạn thu nhỏ cửa sổ lại và chèn một đoạn dưới của phần tử màu đỏ, lúc này phần tử màu vàng sẽ thiết lập vị trí tương đối của nó so với Viewport của trình duyệt.</p>
+
+    <h2>Position sticky</h2>
+    <p>Phần tử được định vị bằng Position sticky sẽ thay đổi vị trí dựa trên thao tác cuộn của người dùng. 
+        Với Position sticky, phần tử sẽ linh động chuyển từ trạng thái relative sang fixed và ngược lại.</p>
+    <br>
+</body>
+</html>
