@@ -18,3 +18,11 @@ a {
 ul {
     list-style-type: none;
 }
+
+a {
+    display: block;
+    padding-left: 8px;
+    height: 27px;
+    line-height: 27px;
+    text-decoration: none;
+}
