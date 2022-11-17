@@ -127,7 +127,7 @@ a {
 }
 .thumbnail {
     width: 988px;
-    height: 344px;
+    height: auto;
     margin-left: 100px;
 }
 
