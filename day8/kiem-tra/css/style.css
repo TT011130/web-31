@@ -195,13 +195,17 @@ a {
 
 .about-content {
     width: 920px;
-    margin: auto;
+    margin-left: 300px;
+    margin-right: auto;
 }
 
 .sec-heading {
     margin-bottom: 70px;
     position: relative;
     text-align: center;
+}
+.sec-heading h3 {
+
 }
 
 .sec-heading img {
@@ -288,8 +292,10 @@ a {
 }
 
 .sec-heading h3{
-    font-size: 30px;
+    font-size: 42px;
     padding-bottom: 10px;
+    font-family: 'Rufina', serif;
+    font-weight: 700;
 }
 .procedure-content {
     width: 1140px;
