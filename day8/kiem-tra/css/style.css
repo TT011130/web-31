@@ -250,17 +250,23 @@ a {
 
 .service-treatment {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 5px;
     position: relative;
+    justify-content: space-around;
 }
 
 .single-service {
     position: relative;
 }
+
+.single-service img {
+    width: 472px;
+    height: 565.203px;
+}
 .service-hover {
-    width: 331.828px;
-    height: 397.344px;
+    width: 472px;
+    height: 565.203px;
     position: absolute;
     top: 0;
     left: 0;
