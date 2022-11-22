@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+section {
+    display: block;
+    position: relative;
+    padding: 50px 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+}
+
+.container {
+    width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.navigation-field {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 1140px;
+}
+
+.logo-placement {
+    position: absolute;
+    left: 400px;
+    width: 255px;
+}
+
+.main-menu {
+    width: 825px;
+    left: 700px;
+    top: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    z-index: 1;
+    
+}
+
+.nav-link {
+    display: block;
+    padding: 8px;
+    margin-top: 35px;
+    color: #6c6c6f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+.nav-link:hover {
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    color: #ff817e;
+}
+.banner {
+    background: url(../images/leaf.png) no-repeat left center/12.5%;
+    padding: 12% 0;
+}
+
+.banner .spa-img{
+    position: absolute;
+    width: 43.4%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.banner-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 287px;
+    z-index: 1;
+}
+
+.banner span {
+    color: #ff817e;
+    display: block;
+    font-family: "Rufina", serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    
+}
+
+.banner h2 {
+    color: #1e2528;
+    font-size: 60px;
+    line-height: 75px;
+    margin-bottom: 25px;
+    font-family: 'Rufina', serif;
+    font-weight: 700;
+}
+
+.banner p {
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.button {
+    background-color: #ff817e;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 0.8;
+    text-transform: uppercase;
+    min-width: 170px;
+    padding: 20px 15px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
+    vertical-align: middle
+}
+
+.button:hover {
+    color: #1e2528;
+}
+
+.banner .video-button {
+    margin-left: 15px;
+}
+
+.video-button i {
+    border-radius: 50%;
+    background-color: #fcf5ee;
+    color: #ff817e;
+    display: inline-block;
+    line-height: 44px;
+    text-align: center;
+    margin-right: 10px;
+    height: 44px;
+    width: 44px;
+    font-size: 12px;
+}
+
+.video-button:hover {
+    color: #ff817e;
+}
+.about {
+    text-align: center;
+    padding-left: 30px;
+}
+.about .china-rose {
+    position: absolute;
+    left: 16%;
+    top: 0;
+    max-width: 160px;
+}
+
+.about .jasmine {
+    position: absolute;
+    right: 135px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 88px;
+}
+
+.about-content {
+    width: 920px;
+    margin: auto;
+}
+
+.sec-heading {
+    margin-bottom: 70px;
+    position: relative;
+    text-align: center;
+}
+
+.sec-heading img {
+    max-width: 84px;
+    margin: 0 auto 40px;
+}
+
+.sec-heading .tagline {
+    color: #888;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: .8;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.sec-heading .title {
+    color: #1e2528;
+    font-size: 42px;
+    margin-bottom: 32px;
+}
+
+.sec-heading p {
+    color: #888;
+    margin-bottom: 0;
+}
+
+.button-to-about {
+    background-color: #ff817e;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 0.8;
+    text-transform: uppercase;
+    min-width: 170px;
+    padding: 20px 15px;
+}
+
+.button-to-about:hover {
+    color: #1e2528;
+}
+
+.service-treatment {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    position: relative;
+}
+
+.single-service {
+    position: relative;
+}
+.service-hover {
+    width: 331.828px;
+    height: 397.344px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 129, 126, 0.9);
+    display: none;
+    color: white;
+    
+}
+
+.service-hover img {
+    width: 15%;
+    height: auto;
+    margin-left: 42%;
+}
+
+.service-hover span {
+    margin-left: 30%;
+    padding: 20px 10px 10px 10px;
+}
+
+.single-service:hover .service-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-pack: center;
+}
+
+.sec-heading h3{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.procedure-content {
+    width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.massage-therapy , .beauty-care , .executive-reflexology {
+    width: 308px;
+    padding: 20px;
+    border: 1px solid rgb(224, 222, 222);
+    text-align: center;
+}
+
+.pro-title {
+    color: #263a41;
+    font-size: 22px;
+    padding: 10px;
+    font-family: 'Rufina', serif;
+    font-weight: 700;
+}
+
+.pro-text {
+    color: #6c6c6f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.read-more-button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 0.8;
+    text-transform: uppercase;
+    min-width: 170px;
+    padding: 20px 15px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #30383b;
+}
+
+.read-more-button:hover {
+    background-color: #ff817e;
+}
+
+
+
+
