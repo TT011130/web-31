@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về JavaScript</title>
+</head>
+<body>
+    <h1>Tìm hiểu về JavaScript</h1>
+    <h2>JavaScript là gì?</h1>
+    <p>JavaScript là một ngôn ngữ lập trình website, được tích hợp và nhúng trong HTML giúp website sống động hơn. 
+    JavaScript cho phép kiểm soát các hành vi của trang web tốt hơn so với khi chỉ sử dụng mỗi HTML</p>
+
+    <h2>JavaScript được dùng làm gì?</h2>
+    <p>JavaScript có thể được ứng dụng trong rất nhiều lĩnh vực:</p>
+    <ul>
+        <li>Lập trình website.</li>
+        <li>Xây dựng ứng dụng cho website máy chủ.</li>
+        <li>Ứng dụng di động, app, trò chơi.</li>
+        <li>...</li>
+    </ul>
+    <p>Khi tải một trang web, trình duyệt phân tích cú pháp HTML và tạo ra một loại dữ liệu gọi là DOM (Document Object Model) từ nội dung.
+         DOM thể hiện chế độ xem trực tiếp của trang web với mã JavaScript.
+         Đoạn mã này thực hiện cập nhật cho DOM và được trình bày ngay lập tức cho người dùng.</p>
+    <p>Document Object Model - DOM ("Mô hình Đối tượng Tài liệu"),
+         là một giao diện lập trình ứng dụng (API).
+          DOM được dùng để truy xuất các tài liệu dạng HTML và XML, có dạng một cây cấu trúc dữ liệu, 
+          và thông thường mô hình DOM độc lập với hệ điều hành và dựa theo kỹ thuật lập trình hướng đối tượng để mô tả tài liệu.
+    </p>
+    <p>Với DOM, JavaScript được tất cả sức mạnh cần thiết để tạo ra HTML động:</p>
+    <ul>
+        <li>JavaScript có thể thay đổi tất cả các phần tử HTML trong trang</li>
+        <li>JavaScript có thể thay đổi tất cả các thuộc tính HTML trong trang</li>
+        <li>JavaScript có thể thay đổi tất cả các phong cách CSS trong trang</li>
+        <li>JavaScript có thể loại bỏ các yếu tố HTML và thuộc tính hiện tại</li>
+        <li>JavaScript có thể thêm các yếu tố HTML mới và các thuộc tính</li>
+        <li>JavaScript có thể phản ứng với tất cả các sự kiện HTML hiện trong trang</li>
+        <li>JavaScript có thể tạo ra các sự kiện HTML mới trong trang</li>
+    </ul>
+
+    <h2>Lợi ích khi sử dụng JavaScript</h2>
+    <h3>Triển khai tập lệnh phía máy khách</h3>
+    <p>Nhờ Javascript, các lập trình viên có thể dễ dàng viết tập lệnh phía máy khách, 
+        tích hợp các tập lệnh một cách liền mạch vào HTML, cho phép website tương tác, trả lời người dùng ngay lập tức và tạo ra giao diện hiển thị phong phú hơn.
+    </p>
+    <h3>Viết mã phía máy chủ</h3>
+    <p>Các lập trình viên có thể viết mã phía máy chủ bằng JavaScript.</p>
+    <h3>Đơn giản hóa phát triển ứng dụng web phức tạp</h3>
+    <p>Javascript cho phép các nhà phát triển đơn giản hóa thành phần của ứng dụng, qua đó đơn giản hóa việc phát triển các ứng dụng web phức tạp.</p>
+    <h3>Thiết kế web responsive</h3>
+    <p>JavaScript cho phép thiết kế web responsive – tối ưu trên cả máy tính và thiết bị di động chỉ với một bộ mã.</p>
+    <h3>Google AMP</h3>
+    <p>Để tham gia vào dự án Tăng tốc trang di động (AMP) của Google, các lập trình viên phải sử dụng ngôn ngữ lập trình JavaScript</p>
+    <h3>Nhiều bộ chuyển đổi</h3>
+    <p>Mặc dù thiếu một số tính năng phức tạp được cung cấp bởi các ngôn ngữ lập trình hiện đại như Java và C#, JavaScript vẫn có thể dễ dàng mở rộng bằng cách sử dụng 
+        các bộ chuyển đổi như CoffeeScript, TypeScript, DukeScript và Vaadin.</p>
+
+    <h2>Các thư viện Javascript phổ biến</h2>
+    <p>Hiện nay có rất nhiều thư viện và khung được viết từ Javascript như:</p>
+    <ul>
+        <li>jQuery: Chuyên về hiệu ứng.</li>
+        <li>js: Chuyên xây dựng ứng dụng thời gian thực.</li>
+        <li>AngularJS: Chuyên xây dựng ứng dụng trang cá nhân.</li>
+        <li>ReactJS: Chuyên viết ứng dụng mobile.</li>
+        <li>Một số thư viện khác như ExtJS, Sencha Touch,…</li>
+    </ul>
+
+    <h1>Cách sử dụng JavaScript</h1>
+    <h2>Cặp thẻ mở và thẻ đóng</h2>
+    <p>
+        Tất cả những đoạn mã Javascript đều phải đặt trong cặp thẻ mở &lt;script&gt; và thẻ đóng &lt;/script&gt;
+    </p>
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+        &lt;script language="javascript"&gt;
+
+            alert("Hello World!");
+    
+        &lt;/script&gt;
+    </p>
+
+    <h2>Đặt thẻ script ở đâu?</h2>
+    <p>Có ba cách đặt thẻ script thường được sử dụng dưới đây:</p>
+    <h3>Internal – viết trong file html hiện tại</h3>
+    <p>Thông thường, bạn có thể viết những đoạn mã Javascript trên phần head. Tuy nhiên, đó cũng không phải là điều kiện bắt buộc. 
+        Vì vậy bạn có thể đặt ở bất kỳ đâu tùy thích miễn là được bao lại bằng thẻ script.</p>
+    <p>Ví dụ: Đặt trong thẻ head</p>
+
+    <p style="white-space: pre-wrap;">
+        &lt;html&gt;
+
+            &lt;head&gt;
+    
+                &lt;title&gt;&lt;/title&gt;
+    
+                &lt;script language="javascript"&gt;
+    
+                    alert("Hello World!");
+    
+                &lt;/script&gt;
+    
+            &lt;/head&gt;
+    
+            &lt;body&gt;
+    
+            
+    
+            &lt;/body&gt;
+    
+        &lt;/html&gt;
+    </p>
+
+    <h3>External – viết ra một file js khác rồi import vào</h3>
+    <p>Bạn có thể viết những đoạn mã Javascript ở một file có phần mở rộng là .js, sau đó dùng thẻ script để import vào. Lúc này bên trong file demo.js  bạn không đặt thẻ scirpt. 
+        Vì nhờ vào đuôi .js, trình duyệt sẽ tự nhận đây là file chứa mã Javascript.</p>
+    <p>Ví dụ:</p>
+    <p>
+        &lt;script language="javascript" src="demo.js"&gt;&lt;/script&gt;
+    </p>
+
+    <h3>Inline  – viết trực tiếp trong thẻ HTML:</h3>
+    <p>Với Inline, bạn sẽ viết những đoạn mã Javascript trực tiếp trong thẻ HTML. 
+        Ví dụ bên dưới viết dưới dạng inline vì đoạn mã alert(1) được đặt trong sự kiện onclick của thẻ button.</p>
+    <p>Ví dụ:</p>
+    <p>
+        &lt;input type="button" onclick="alert(1)" value="Click Me"/&gt;
+    </p>
+
+    <h2>Viết chương trình JavaScript</h2>
+    <p>Bước 1:</p>
+    <ul>
+        <li>Tạo một file index.html  và lưu tại bất kì vị trí nào với phần mở rộng là .html</li>
+        <li>Mở file bằng Notepad++ rồi gõ nội dung sau:</li>
+        <p style="white-space: pre-wrap;">
+            &lt;html&gt;
+
+                &lt;head&gt;
+        
+                    &lt;title>&lt;/title&gt;
+        
+                &lt;/head&gt;
+        
+                &lt;body&gt;
+        
+                    &lt;input type="button" value="Click Me"/&gt;
+        
+                &lt;/body&gt;
+        
+            &lt;/html&gt;
+        </p>
+        <li>Chạy lên bằng Firefox hoặc Chrome bạn thấy xuất hiện một button</li>
+    </ul>
+    <p>Bước 2:</p>
+    <p>Viết mã Javascript khi click vào button có id=”clickme” .</p>
+    <p style="white-space: pre-wrap;">
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body>&gt;
+                &lt;input type="button" id="clickme" value="Click Me"/&gt;
+                &lt;script language="javascript"&gt;
+         
+                // Lấy element có id=clickme lưu vào biến button
+                var button = document.getElementById('clickme');
+         
+                // Khi click vào element chứa trong button thì thực hiện một function,
+                // bên trong function thông báo lên Hello World!
+                button.addEventListener('click', function(){
+                    alert('Hello World!');
+                });
+                &lt;/script&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </p>
+
+    <h1>Sử dụng Chrome DevTool với JavaScript</h1>
+    <p>Đây là những gì bạn sẽ thấy khi mở Chrome Developer Tools:</p>
+    <img src="images/giao-dien-devtool.jpg" alt="giao-dien-devtool">
+    <p>Có ba tab ở đầu cửa sổ Chrome Developer Tools và sáu tab khác mà bạn có thể thấy bằng cách nhấp vào biểu tượng >> bên cạnh chúng.</p>
+    <p>Các tab là:</p>
+    <ul>
+        <li>Elements</li>
+        <li>Console</li>
+        <li>Source</li>
+        <li>Network</li>
+        <li>Application</li>
+        <li>Security</li>
+        <li>Memory</li>
+        <li>Performance</li>
+        <li>Audits</li>
+    </ul>
+    <img src="images/giao-dien-devtool-2.jpg" alt="giao-dien-devtool-2">
+    <p>Tab Console hiển thị code JavaScript. Nó cung cấp cho bạn thông tin về các yếu tố tương tác 
+        trên một trang. Trong tab console, bạn có thể viết JavaScript để tương tác với trang web bạn 
+        đang xem và nó cũng cho phép bạn viết thông báo cho chính mình bằng JavaScript của các trang web bạn đang xây dựng, 
+        sau đó sẽ hiển thị trong tab console để cho biết rằng JS đã được thực thi .</p>
+    <img src="images/tab-console.jpg" alt="tab-console  ">
+
+    <h1>Các kiểu dữ liệu trong JavaScript</h1>
+    <p>JavaScript có 8 kiểu dữ liệu cơ bản, trong đó, có 7 kiểu dữ liệu nguyên thủy 
+        (boolean, null, undefined, number, BigInt, string, symbol) và 1 kiểu dữ liệu dạng tham chiếu (object).</p>
+    <h2>Kiểu dữ liệu boolean (kiểu logic): bao gồm hai giá trị true và false dùng để biểu diễn đúng và sai.</h2>
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+            let isWebLoaded = true; // => Trang web đã được tải xong
+            console.log(isWebLoaded); // true
+            
+            let isProgramRunning = false; // Chương trình đang không chạy
+            console.log(isProgramRunning); // false
+    </p>
+    <h2>Kiểu dữ liệu null: chỉ gồm một giá trị null, dùng để biểu thị trạng thái không biết giá trị.</h2>
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+            let language = null;
+            console.log(language); // null
+    </p>
+    <h2>Kiểu dữ liệu undefined: chỉ gồm một giá trị undefined, dùng để biểu thị trạng thái chưa gán giá trị.</h2>
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+            let language = undefined;
+            console.log(language); // undefined
+    </p>
+    <h3>Khác nhau cơ bản giữa undefined và null:</h3>
+    <ul>
+        <li>Kiểu dữ liệu null là kiểu dữ liệu được gán cho biến, thường được hiểu là không biết (không có).</li>
+        <li>Trong khi đó, kiểu dữ liệu undefined là giá trị mặc định của biến sau khi khai báo mà không gán giá trị cho biến</li>
+        <p>Ví dụ khai báo biến mà không gán giá trị:</p>
+        <p style="white-space: pre-wrap;">
+                let language;
+                console.log(language); // undefined
+        </p>
+        <p>Trường hợp biến đã có giá trị rồi, bạn vẫn có thể chủ động gán lại giá trị undefined cho biến. 
+                Tuy nhiên, điều này là không nên. Vì như vậy là không đúng ý nghĩa của kiểu dữ liệu undefined.</p>
+        <p style="white-space: pre-wrap;">
+                let language = "JavaScript";
+                console.log(language); // JavaScript
+
+                // KHÔNG NÊN
+                language = undefined;
+                console.log(language); // undefined
+
+                // NÊN
+                language = null;
+                console.log(language); // null
+        </p>
+    </ul>
+        <h2>Kiểu dữ liệu number: dùng để biểu diễn số nguyên hoặc số thực</h2>
+        <p style="white-space: pre-wrap;">
+            let n1 = 66; // số nguyên dương
+            let n2 = -66; // số nguyên âm
+            let n3 = 3.14; // số thực dương
+            let n4 = -3.14; // số thực âm
+            let n5 = 2e3; // => 2*10^3 = 2000
+            let n6 = 2e-3; // => 2*10^(-3) = 0.002
+            let n7 = 0xff; // số dạng hexa (hệ cơ số 16): 15*16 + 15 = 255
+            let n8 = 067; // số dạng octa (hệ cơ số 8): 6*8 + 7 = 55
+            let n9 = 0b11; // số dạng nhị phân (hệ cơ số 2): 1*2 + 1 = 3
+        </p>
+        <p>Ngoài những loại số trên, JavaScript còn có 3 số đặc biệt là: Infinity, -Infinity và NaN.</p>
+        <ul>
+            <li>Infinity: là số dương vô cùng. Đây là giá trị đặc biệt và nó lớn hơn bất kỳ số nào khác. 
+                Bạn có thể sử dụng giá trị này trực tiếp hoặc thu được nó bằng cách lấy lấy số dương bất kỳ chia cho 0 (toán tử chia trong JavaScript là /).
+            </li>
+            <p>console.log(Infinity); // Infinity console.log(1 / 0); // Infinity</p>
+            <li>-Infinity: là số âm vô cùng. Đây cũng là giá trị đặc biệt và nó nhỏ hơn bất kỳ số nào khác. 
+                Bạn có thể sử dụng giá trị này trực tiếp hoặc thu được nó bằng cách lấy lấy số âm bất kỳ chia cho 0
+            </li>
+            <p>console.log(-Infinity); // -Infinity console.log(-1 / 0); // -Infinity</p>
+            <li>NaN: là viết tắt của Not a Number, được sử dụng để đại diện cho những trường hợp tính toán sai hoặc kết quả của một phép tính không xác định.</li>
+            <p style="white-space: pre-wrap;">// Lấy 0 / 0 console.log(0 / 0); // NaN
+                // Lấy chuỗi ký tự chia cho số console.log("JavaScript" / 2); // NaN
+                // Lấy hai số Infinity trừ cho nhau console.log(Infinity - Infinity); // NaN</p>
+        </ul>
+        <p>Nhờ những số đặc biệt này mà việc tính toán trong JavaScript "luôn an toàn". 
+            Vì chương trình sẽ không bao giờ bị crash do lỗi chia cho 0 hay giá trị không phải số. Điều mà bạn có thể gặp phải ở nhiều ngôn ngữ khác như C/C++, Java,...</p>
+        <h2>Kiểu dữ liệu BigInt:</h2> 
+             <p>
+                 Dùng để biểu diễn số nguyên lớn, có độ dài tùy ý. 
+                Để biểu diễn số thuộc kiểu BigInt, bạn chỉ cần thêm chữ cái n ở cuối.
+             </p>
+        <p>Trong JavaScript, kiểu dữ liệu number không thể biểu diễn một số nguyên lớn hơn (253-1) (bằng 9007199254740991) và nhỏ hơn -(253-1).</p>
+        <p>Với hầu hết các trường hợp, việc sử dụng kiểu dữ liệu number là quá đủ. Nhưng đôi khi, bạn vẫn cần biểu diễn và tính toán với những số nguyên cực kỳ lớn. Do đó, kiểu dữ liệu BigInt ra đời nhằm giải quyết vấn đề này.</p>
+        <p>Để biểu diễn số nguyên với kiểu BigInt, bạn chỉ cần thêm chữ cái n ở phía sau, ví dụ:</p>
+        <p style="white-space: pre-wrap;">const reallyBigNumber = 12345678987654321012345678987654321n;
+            console.log(reallyBigNumber); // 12345678987654321012345678987654321n</p>
+        
+        <h2>Kiểu dữ liệu string</h2>
+        <p>String là kiểu dữ liệu dùng để biểu diễn chữ, văn bản, đoạn văn bản,...</p>
+        <p>Có ba cách để biểu diễn string trong JavaScript:</p>
+        <ul>
+            <li>Dùng dấu nháy đơn (')</li>
+            <li>Dùng dấu nháy kép (")</li>
+            <li>Dùng dấu "backtick" (`)</li>
+        </ul>
+        <p>Ví dụ:</p>
+        <p style="white-space: pre-wrap;">
+            const msg1 = "Đây là string dùng dấu nháy đơn";
+            const msg2 = "Đây là string dùng dấu nháy kép";
+            const msg3 = `Đây là string dùng dấu backtick`;
+        </p>
+        <p>Dấu nháy đơn và dấu nháy kép là hoàn toàn giống nhau.</p>
+        <p>Riêng với dấu "backtick", bạn có thể sử dụng biến, hằng hoặc thậm chí viết một biểu thức trong đó, với cú pháp ${…}, ví dụ:</p>
+        <p style="white-space: pre-wrap;">
+            // Truyền biến vào trong dấu "backtick"
+            let name = "Lam";
+            console.log(`My name is ${name}`); // My name is Lam
+
+            // Truyền hằng vào trong dấu "backtick"
+            const language = "JavaScript";
+            console.log(`You are learning ${language}`); // You are learning JavaScript
+
+            // Truyền vào biểu thức
+            console.log(`1 + 2 = ${1 + 2}`); // 1 + 2 = 3
+        </p>
+
+        <h2>Kiểu dữ liệu symbol</h2>
+        <p>Symbol là một kiểu dữ liệu nguyên thủy dùng để tạo ra các giá trị duy nhất (unique value) và bất biến (immutable). Symbol thường được dùng làm key cho kiểu dữ liệu object sau đây.</p>
+
+        <h2>Kiểu dữ liệu object</h2>
+        <p>Object là kiểu dữ liệu tham chiếu. Có thể hiểu object là một tập hợp gồm các cặp key - value (khóa - giá trị).</p>
+        <p>Trong đó, kiểu dữ liệu của key có thể là string hoặc symbol. Và value ứng với key có thể là bất kỳ kiểu dữ liệu nào.</p>
+
+        <h2>Cách xác định kiểu dữ liệu của biến</h2>
+        <p>Như đã nói ở trên, một biến trong JavaScript có thể thuộc bất kỳ kiểu dữ liệu nào. 
+            Để xác định kiểu dữ liệu hiện tại của một biến, JavaScript cung cấp cho bạn typeof, với hai loại cú pháp:</p>
+        <ul>
+            <li>Dạng toán tử typeof x</li>
+            <li>Dạng hàm typeof(x)</li>
+        </ul>
+        <p>Kết quả trả về sẽ là một string ứng với tên của kiểu dữ liệu. Ví dụ về toán tử typeof với các kiểu dữ liệu trong JS:</p>
+        <p style="white-space: pre-wrap;">
+            let x;
+            console.log(typeof x); // undefined
+
+            x = true;
+            console.log(typeof x); // boolean
+
+            x = 1;
+            console.log(typeof x); // number
+
+            x = 1234567891234567890123456789125345362n;
+            console.log(typeof x); // bigint
+
+            x = "hello";
+            console.log(typeof x); // string
+
+            // (1)
+            x = Symbol("id");
+            console.log(typeof x); // symbol
+            // (2)
+            x = { n: 1 };
+            console.log(typeof x); // object
+            // (3)
+            x = null;
+            console.log(typeof x); // object
+        </p>
+    
+    <h1>Tìm hiểu về biến trong JavaScript</h1>
+    
+    <h2>Biến là gì ?</h2>
+    <p>Giống như nhiều ngôn ngữ lập trình khác, JavaScript có các biến. Các biến có thể được coi là các thùng chứa có tên. 
+        Bạn có thể đặt dữ liệu vào các vùng chứa này và sau đó tham khảo dữ liệu chỉ bằng cách đặt tên vùng chứa.
+    </p>
+
+    <h2>Biến JavaScrip được lưu ở đâu.</h2>
+    <p>Các biến JavaScript được lưu trữ trong bộ nhớ của browser process ( tiến trình trình duyệt) 
+        hiểu nôm na 1 cách đơn giản là biến được lưu trong phần Ram mà trình duyệt đang sử dụng.
+    </p>
+
+    <h2>Khai báo biến</h2>
+    <p>Để khai báo một biến ta sử dụng từ khóa <code>const, let, var</code>.</p>
+    <p><strong>const</strong> được sử dụng để khai báo 1 hằng số, và giá trị của nó không thay đổi trong suốt chương trình.</p>
+    <p><strong>let</strong> khai báo biến chỉ có thể truy cập được trong block bao quanh nó được xác định bằng cặp {}.</p>
+    <p><strong>var</strong> khai báo biến có thể truy cập ở phạm vi hàm số hoặc bên ngoài hàm số, toàn cục.</p>
+    <p>Giống như ngôn ngữ khác, cách đặt tên biến của JS cũng phải tuân theo 1 số quy tắc sau :</p>
+    <ul>
+        <li>Tên biến phải là các chữ không dấu viết hoa hoặc viết thường, các chữ số từ 0-9 và dấu gạch dưới () và kí hiệu $.</li>
+        <li>Tên biến bắt đầu phải là chữ hoặc dấu gạch dưới (_), nếu bắt đầu bằng số là sai.</li>
+        <li>Không thể sử dụng các từ dành riêng (như từ khóa JavaScript) làm tên.</li>
+        <li>Các tên có phân biệt chữ hoa chữ thường</li>
+    </ul>
+
+    <p style="white-space: pre-wrap;">
+        *// Đúng*
+
+        var person;
+ 
+        *// Đúng*
+
+        var _person;
+ 
+        *// Đúng*
+
+        var __person;
+ 
+        *// Đúng*
+
+        var person1;
+ 
+        *// SAI*
+
+        var 10persion;
+    </p>
+
+    <h2>Kiểu dữ liệu của biến</h2>
+    <p>Khi khai báo biến ta không cần phải khai báo kiểu của biến đó trước khi dùng. 
+        Kiểu sẽ được tự động xác định trong lúc chương trình được thực thi. 
+        Điều đó cũng có nghĩa là một biến có thể chứa giá trị của các kiểu dữ liệu khác nhau.
+    </p>
+    <br>
+    <p style="white-space: pre-wrap;">
+        var test = 123 ; // test là một số
+
+        var test = "variable of js "; //test là một chuỗi
+
+        var test = true;  // test là một boolean
+    </p>
+    <br>
+    <p>Các kiểu dữ liệu của biến đã được trình bày trong phần trên</p>
+
+    <h2>Phạm vi của biến</h2>
+    <p>Có hai loại phạm vi trong JavaScript. biến cục bộ (local scope) và biến toàn cục (global scope). 
+        Biến toàn cục được khai báo ngoài hàm , trong khi đó biến cục bộ được lưu khai báo bên trong một hàm.
+        (Nên với cùng một tên biến, ta có thể khai báo ở những hàm khác nhau).
+    </p>
+    <br>
+    <p>Một biến toàn cục có thể được truy cập từ bên ngoài của hàm cũng như bên trong của hàm nhưng, 
+        một biến cục bộ chỉ có thể được truy cập bên trong hàm. Nếu truy cập từ bên ngoài của hàm, 
+        bạn sẽ nhận được lỗi 'undefined variable' (biến không xác định).
+    </p>
+    <br>
+    <p>Ví dụ: </p>
+    <p style="white-space: pre-wrap;">
+        function sum(a, b) { 
+            var sum = (a + b) ; // sum là biến cục bố
+            return sum;
+        }
+         
+        var result  = sum(10, 20); //result là biến toàn cục
+         
+         //và chúng ta có thể sử dụng biến result ở khắp nơi
+        function showResult(result) {
+            alert('sum is: ' + result);
+        }
+         
+        showResult();
+    </p>
+
+    <h1>Toán tử</h1>
+
+    <h2>Toán tử gán trong javascript</h2>
+    <p>Toán tử gán được dùng để gán giá trị ở bên phải toán tử vào biến ở bên trái toán tử. 
+        Có các toán tử gán sau:
+    </p>
+
+    <table>
+        <tr>
+            <th>Toán tử</th>
+            <th>Ví dụ</th>
+            <th>Ý nghĩa</th>
+        </tr>
+
+        <tr>
+            <td>=</td>
+            <td>x = y</td>
+            <td>gán giá trị y vào x</td>
+        </tr>
+
+        <tr>
+            <td>+=</td>
+            <td>x =+ y</td>
+            <td>x = x + y; cộng thêm vào x giá trị y</td>
+        </tr>
+
+        <tr>
+            <td>-=</td>
+            <td>x -= y</td>
+            <td>x = x - y</td>
+        </tr>
+
+        <tr>
+            <td>*=</td>
+            <td>x *=y </td>
+            <td>x = x * y</td>
+        </tr>
+
+        <tr>
+            <td>/=</td>
+            <td>x /= y</td>
+            <td>x = x / y</td>
+        </tr>
+
+        <tr>
+            <td>%=</td>
+            <td>x %= y</td>
+            <td>x = x % y</td>
+        </tr>
+
+        <tr>
+            <td>??=</td>
+            <td>x ??= y</td>
+            <td>Toán tử <strong>??=</strong> trong js là phép gán khi null. 
+            Nếu x=null thì giá trị y gán cho x, nếu x đã khác null thì không thay đổi gì
+        </td>
+        </tr>
+    </table>
+
+    <h2>Các toán tử số học JS</h2>
+    <p>Các toán tử số học này thực hiện trên các số - dữ liệu dạng số (giá trị cụ thể hoặc giá trị nằm trong tên biến).
+    </p>
+
+    <table>
+        <tr>
+            <th>Toán tử</th>
+            <th>Ví dụ</th>
+            <th>Ý nghĩa</th>
+        </tr>
+
+        <tr>
+            <td>+</td>
+            <td>Phép cộng</td>
+            <td>25 + 5 = 30</td>
+        </tr>
+
+        <tr>
+            <td>-</td>
+            <td>Phép trừ</td>
+            <td>10 - 5 = 5</td>
+        </tr>
+
+        <tr>
+            <td>*</td>
+            <td>Phép nhân</td>
+            <td>2 * 3 = 6</td>
+        </tr>
+
+        <tr>
+            <td>/</td>
+            <td>Phép chia </td>
+            <td>20 / 2 = 10</td>
+        </tr>
+
+        <tr>
+            <td>%</td>
+            <td>Lấy phần dư của phép chia</td>
+            <td>56 / 3 = 2</td>
+        </tr>
+
+        <tr>
+            <td>++</td>
+            <td>Tăng thêm 1</td>
+            <td>var a = 10; a ++; //giá trị a là 11</td>
+        </tr>
+
+        <tr>
+            <td>--</td>
+            <td>giảm đi 1</td>
+            <td>var a = 10; a --; //giá trị a là 9</td>
+        </tr>
+    </table>
+
+    <p>Ví dụ:</p>
+    <p style="white-space: pre-wrap;">
+        var x = 10 + 5;
+        document.write(x);
+        // In ra:  15
+    </p>
+
+    <p style="white-space: pre-wrap;">
+        var x = 10;
+        var y = x + 5 + 22 + 45 + 6548;
+        document.write(y);
+    </p>
+
+    <p style="white-space: pre-wrap;">
+        var a = 0; b = 10;
+        var a = b++;
+        //a sẽ là 10; b là 11
+    </p>
+
+    <h2>Toán tử so sánh</h2>
+    <p>Toán tử so sánh sử dụng trong các biểu thức về logic để so sánh bằng nhau, khác nhau. Nó trả về giá trị true false</p>
+    <p>JavaScript có một số toán tử so sánh, ví dụ so sánh bằng: ==</p>
+    
+    <table>
+        <tr>
+            <th>Toán tử</th>
+            <th>Diễn tả</th>
+            <th>Ví dụ</th>
+        </tr>
+
+        <tr>
+            <td>==</td>
+            <td>so sánh bằng (và giá trị, không so sánh về kiểu dữ liệu)</td>
+            <td style="white-space: pre-wrap;">
+                var v1 = (5 == 10); // false
+                var v2 = 5;         // số
+                var v3 = "5 ";      // chuỗi
+                var v4 = (v2 == v3);// true
+            </td>
+        </tr>
+
+        <tr>
+            <td>===</td>
+            <td>=== trong js so sánh giống nhau (true nếu cùng giá trị và kiểu dữ liệu)</td>
+            <td style="white-space: pre-wrap;">
+                var v1 = (5 === 10);  // false
+                var v2 = 5;           // kiểu số number
+                var v3 = "5 ";        // chuỗi string
+                var v4 = (v2 === v3); // false, giống giá trị nhưng khác kiểu
+            </td>
+        </tr>
+
+        <tr>
+            <td>!=</td>
+            <td>so sánh khác giá trị (dấu khác trong javascript chỉ so sánh và giá trị không xét đến kiểu)</td>
+            <td style="white-space: pre-wrap;">
+                var v1 = (5 != 10);  // true
+                var v2 = (5 != "5"); // false
+            </td>
+        </tr>
+
+        <tr>
+            <td>!==</td>
+            <td>Khác giá trị và khác kiểu</td>
+            <td style="white-space: pre-wrap;">
+                var v1 = (5 !== 10);  // false - khác giá trị nhưng cùng kiểu
+                var v2 = (5 !== "10"); // true
+            </td>
+        </tr>
+
+        <tr>
+            <td>></td>
+            <td>lớn hơn</td>
+            <td style="white-space: pre-wrap;">                10 > 5 true</td>
+        </tr>
+
+        <tr>
+            <td>>=</td>
+            <td>lớn hơn hoặc bằng</td>
+            <td style="white-space: pre-wrap;">                10 >= 5 true</td>
+        </tr>
+
+        <tr>
+            <td>&lt;</td>
+            <td>nhỏ hơn</td>
+            <td style="white-space: pre-wrap;">                10 &lt; 5 false</td>
+        </tr>
+
+        <tr>
+            <td>&lt;=</td>
+            <td>nhỏ hơn hoặc bằng</td>
+            <td style="white-space: pre-wrap;">                10 &lt;= 5 false</td>
+        </tr>
+    </table>
+
+    <h2>Toán tử logic</h2>
+    <p>Bảng toán tử logic gồm các phép toán : và - hoặc - phủ định</p>
+
+    <table>
+        <tr>
+            <th>Toán tử</th>
+            <th>Diễn tả</th>
+        </tr>
+        
+        <tr>
+            <td>&&</td>
+            <td>phép và (toán tử && trong javascript) trả về true nếu 2 số hạng là true: a && b</td>
+        </tr>
+
+        <tr>
+            <td>||</td>
+            <td>phép hoặc (toán tử hoặc trong javascript) trả về true nếu 1 trong 2 số hạng là true : a || b</td>
+        </tr>
+
+        <tr>
+            <td>!</td>
+            <td>phủ định; !a trả về giá trị ngược với biểu thức a</td>
+        </tr>
+    </table>
+
+    <h2>Toán tử ba ngôi sao - Toán tử điều kiện</h2>
+    <p>variable = (condition) ? value1: value2;</p>
+    <p>Nhận giá trị value1 nếu điều kiện là true, nhận value2 nếu điều kiện false. Đây là cách viết ngắn ngọn của lệnh if, câu lệnh trên tương đương với</p>
+    <p style="white-space: pre-wrap;">
+        if (condition)
+            variable = value1;
+        else
+            variable = value2;
+    </p>
+    <br>
+    <p style="white-space: pre-wrap;">
+        var isAdult = (age &lt; 18) ? "Too young": "Old enough";
+        //isAdult = "Too young" nếu age nhỏ hơn 18
+        //isAdult = "Old enough" nếu age lớn hơn hoặc bằng 18
+    </p>
+
+    <h2>Toán tử với chuỗi trong JS</h2>
+    <p>Toán tử với chuỗi sử dụng nhiều là nối hai chuỗi lại với nhau, sử dụng toán tử + để nối. Lưu ý toán tử này có thể nối số vào chuỗi.</p>
+    <p style="white-space: pre-wrap;">
+        var mystring1 = "Học viết mã ";
+        var mystring2 = "JavaScript.";
+        document.write(mystring1 + mystring2);
+
+        //sẽ viết ra: Học viết mã JavaScript.
+    </p>
+
+    <h2>Toán tử typeof</h2>
+    <p>Toán tử typeof trả về kiểu dữ liệu cần kiểm tra của một biến, một giá trị.</p>
+
+    <p style="white-space: pre-wrap;">
+        var a = 1;
+        var b = "Hi";
+        var c = true;
+        var d = null;
+        var e;
+
+        console.log(typeof(a)); // trả về number
+        console.log(typeof(b)); // trả về string
+        console.log(typeof(c)); // trả về boolean
+        console.log(typeof(d)); // trả về object
+        console.log(typeof(e)); // trả về undefined
+        console.log(typeof(f)); // trả về undefined
+    </p>
+</body>
+</html>
