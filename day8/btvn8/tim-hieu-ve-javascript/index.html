@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Tìm hiểu về JavaScript</h1>
-    <h2>JavaScript là gì?</h1>
+    <h2>JavaScript là gì?</h2>
     <p>JavaScript là một ngôn ngữ lập trình website, được tích hợp và nhúng trong HTML giúp website sống động hơn. 
     JavaScript cho phép kiểm soát các hành vi của trang web tốt hơn so với khi chỉ sử dụng mỗi HTML</p>
 
@@ -131,24 +131,26 @@
     <p>Bước 1:</p>
     <ul>
         <li>Tạo một file index.html  và lưu tại bất kì vị trí nào với phần mở rộng là .html</li>
-        <li>Mở file bằng Notepad++ rồi gõ nội dung sau:</li>
-        <p style="white-space: pre-wrap;">
-            &lt;html&gt;
-
-                &lt;head&gt;
+        <li>Mở file bằng Notepad++ rồi gõ nội dung sau:
+            <p style="white-space: pre-wrap;">
+                &lt;html&gt;
+    
+                    &lt;head&gt;
+            
+                        &lt;title>&lt;/title&gt;
+            
+                    &lt;/head&gt;
+            
+                    &lt;body&gt;
+            
+                        &lt;input type="button" value="Click Me"/&gt;
+            
+                    &lt;/body&gt;
+            
+                &lt;/html&gt;
+            </p>
+        </li>
         
-                    &lt;title>&lt;/title&gt;
-        
-                &lt;/head&gt;
-        
-                &lt;body&gt;
-        
-                    &lt;input type="button" value="Click Me"/&gt;
-        
-                &lt;/body&gt;
-        
-            &lt;/html&gt;
-        </p>
         <li>Chạy lên bằng Firefox hoặc Chrome bạn thấy xuất hiện một button</li>
     </ul>
     <p>Bước 2:</p>
@@ -226,7 +228,8 @@
     <ul>
         <li>Kiểu dữ liệu null là kiểu dữ liệu được gán cho biến, thường được hiểu là không biết (không có).</li>
         <li>Trong khi đó, kiểu dữ liệu undefined là giá trị mặc định của biến sau khi khai báo mà không gán giá trị cho biến</li>
-        <p>Ví dụ khai báo biến mà không gán giá trị:</p>
+    </ul>
+    <p>Ví dụ khai báo biến mà không gán giá trị:</p>
         <p style="white-space: pre-wrap;">
                 let language;
                 console.log(language); // undefined
@@ -245,8 +248,8 @@
                 language = null;
                 console.log(language); // null
         </p>
-    </ul>
-        <h2>Kiểu dữ liệu number: dùng để biểu diễn số nguyên hoặc số thực</h2>
+
+    <h2>Kiểu dữ liệu number: dùng để biểu diễn số nguyên hoặc số thực</h2>
         <p style="white-space: pre-wrap;">
             let n1 = 66; // số nguyên dương
             let n2 = -66; // số nguyên âm
@@ -262,16 +265,19 @@
         <ul>
             <li>Infinity: là số dương vô cùng. Đây là giá trị đặc biệt và nó lớn hơn bất kỳ số nào khác. 
                 Bạn có thể sử dụng giá trị này trực tiếp hoặc thu được nó bằng cách lấy lấy số dương bất kỳ chia cho 0 (toán tử chia trong JavaScript là /).
+                <p>console.log(Infinity); // Infinity console.log(1 / 0); // Infinity</p>
             </li>
-            <p>console.log(Infinity); // Infinity console.log(1 / 0); // Infinity</p>
+            
             <li>-Infinity: là số âm vô cùng. Đây cũng là giá trị đặc biệt và nó nhỏ hơn bất kỳ số nào khác. 
                 Bạn có thể sử dụng giá trị này trực tiếp hoặc thu được nó bằng cách lấy lấy số âm bất kỳ chia cho 0
+                <p>console.log(-Infinity); // -Infinity console.log(-1 / 0); // -Infinity</p>
             </li>
-            <p>console.log(-Infinity); // -Infinity console.log(-1 / 0); // -Infinity</p>
-            <li>NaN: là viết tắt của Not a Number, được sử dụng để đại diện cho những trường hợp tính toán sai hoặc kết quả của một phép tính không xác định.</li>
-            <p style="white-space: pre-wrap;">// Lấy 0 / 0 console.log(0 / 0); // NaN
-                // Lấy chuỗi ký tự chia cho số console.log("JavaScript" / 2); // NaN
-                // Lấy hai số Infinity trừ cho nhau console.log(Infinity - Infinity); // NaN</p>
+            
+            <li>NaN: là viết tắt của Not a Number, được sử dụng để đại diện cho những trường hợp tính toán sai hoặc kết quả của một phép tính không xác định.
+                <p style="white-space: pre-wrap;">// Lấy 0 / 0 console.log(0 / 0); // NaN
+                    // Lấy chuỗi ký tự chia cho số console.log("JavaScript" / 2); // NaN
+                    // Lấy hai số Infinity trừ cho nhau console.log(Infinity - Infinity); // NaN</p>
+            </li>
         </ul>
         <p>Nhờ những số đặc biệt này mà việc tính toán trong JavaScript "luôn an toàn". 
             Vì chương trình sẽ không bao giờ bị crash do lỗi chia cho 0 hay giá trị không phải số. Điều mà bạn có thể gặp phải ở nhiều ngôn ngữ khác như C/C++, Java,...</p>
