@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm hiểu về array</title>
+</head>
+<body>
+    <h1>Array là gì</h1>
+    <p>Array, hay được gọi là mảng, là kiểu dữ liệu mà giá trị của nó chứa nhiều giá trị khác. Mỗi giá trị của mảng được gọi là element (phần tử)</p>
+    <p>Array trong JavaScript cũng là một loại object. Nhưng array khác object bình thường ở chỗ là:</p>
+    <ul>
+        <li>Array (mảng) được thiết kế để lưu trữ dữ liệu theo thứ tự.</li>
+        <li>Object (đối tượng) bình thường chỉ là tập hợp của các cặp key-value.</li>
+    </ul>
+
+    <h1>Khởi tạo array</h1>
+    <p>Có hai cách để khởi tạo array rỗng là:</p>
+   <ul>
+    <li>Sử dụng dấu ngoặc vuông [].</li>
+    <li>Sử dụng hàm khởi tạo new Array().</li>
+   </ul>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let a1 = [];
+        let a2 = new Array();
+    </p>
+
+    <p>Trong đó, cú pháp sử dụng [] là phổ biển hơn cả vì cách này nhanh và ngắn gọn hơn.</p>
+    <p>Ngoài ra, bạn có thể khởi tạo array trong JavaScript với một số phần tử cho trước:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+    </p>
+
+    <p>Khi đó, các phần tử trong mảng được sắp xếp theo thứ tự, phần tử đầu tiên có chỉ số là 0. Phần tử cuối cùng có chỉ số bằng độ dài mảng trừ đi 1 đơn vị.</p>
+
+    <h2>Truy cập phần tử trong mảng</h2>
+    <p>Để truy cập các phần tử trong mảng, sử dụng arr[index] với index là chỉ số của phần tử:</p>
+
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        console.log(letters[0]); // a
+        console.log(letters[1]); // b
+        console.log(letters[2]); // c
+
+        // trường hợp chỉ số ngoài phạm vi giới hạn thì kết quả là undefined
+        console.log(letters[-1]); // undefined
+        console.log(letters[3]); // undefined
+    </p>
+     
+    <h2>Thay đổi giá trị của phần tử trong mảng</h2>
+
+    <p>Có thể thay đổi giá trị của phần tử trong mảng:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        // thay đổi giá trị của mảng tại chỉ số 0
+        letters[0] = "A";
+        console.log(letters[0]); // A
+    </p>
+
+    <h2>Thêm phần tử vào mảng</h2>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        // thêm phần tử vào mảng tại chỉ số 3
+        letters[3] = "d";
+        console.log(letters[3]); // d
+    </p>
+    
+    <h1>Một số đặc điểm của array trong JavaScript </h1>
+    <p>Tổng số phần tử trong mảng được xác định qua thuộc tính length:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        console.log(letters.length); // 3
+    </p>
+    <p>Bạn có thể in ra toàn bộ giá trị của mảng:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        console.log(letters); // (3) ['a', 'b', 'c']
+    </p>
+
+    <p>Giá trị các phần tử trong mảng có thể thuộc bất kỳ kiểu dữ liệu nào:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let arr = [
+            "a", // string
+            1, // number
+            null, // null
+            undefined, // undefined
+            { x: 1 }, // object
+            function () {
+                // hàm
+                console.log("hello");
+            },
+        ];
+
+        // giá trị tại chỉ số 4 là object { x: 1}
+        console.log(arr[4].x); // 1
+
+        // giá trị tại chỉ số 5 là hàm
+        arr[5](); // hello
+    </p>
+
+    <p>Tương tự như object, array có thể có hoặc không dùng "dấu phẩy đuôi" - dấu phẩy sau phần tử cuối cùng.</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let arr = [
+            "a",
+            1,
+            null,
+            undefined,
+            { x: 1 },
+            function () {
+                console.log("hello");
+            },
+        ];
+    </p>
+    <p>Việc thêm dấu phẩy sau phần tử cuối cùng giúp phần biểu diễn các thuộc tính giống nhau. Qua đó, việc thêm/xóa phần tử trở nên dễ dàng hơn.</p>
+
+    <h1>Một số phương thức cơ bản của array</h1>
+    <p>Một số phương thức cơ bản của array trong JavaScript là: arr.pop(), arr.push(), arr.shift() và arr.unshift().</p>
+
+    <h2> Phương thức arr.pop()</h2>
+    <p>Lấy ra và trả về phần tử cuối cùng của mảng.</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+        let item = letters.pop();
+
+        console.log(item); // c
+        console.log(letters); // (2) ['a', 'b']
+    </p>
+
+    <h2>Phương thức arr.push()</h2>
+    <p>Thêm một hoặc nhiều phần tử vào cuối mảng và trả về độ dài mới của mảng.</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        // thêm một phần tử vào cuối mảng
+        let length = letters.push("d");
+        console.log(length); // 4
+        console.log(letters); // (4) ['a', 'b', 'c', 'd']
+
+        // thêm nhiều phần tử vào cuối mảng
+        length = letters.push("e", "f");
+        console.log(length); // 6
+        console.log(letters); // (6) ['a', 'b', 'c', 'd', 'e', 'f']
+    </p>
+
+    <h2>Phương thức arr.shift()</h2>
+    <p>Lấy ra và trả về phần tử đầu tiên của mảng.</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+        let item = letters.shift();
+
+        console.log(item); // a
+        console.log(letters); // (2) ['b', 'c']
+    </p>
+
+    <h2>Phương thức arr.unshift()</h2>
+    <p>Thêm một hoặc nhiều phần tử vào đầu mảng.</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        // thêm một phần tử vào đầu mảng
+        let length = letters.unshift("d");
+        console.log(length); // 4
+        console.log(letters); // (4) ['d', 'a', 'b', 'c']
+
+        // thêm nhiều phần tử vào đầu mảng
+        length = letters.unshift("e", "f");
+        console.log(length); // 6
+        console.log(letters); // (6) ['e', 'f', 'd', 'a', 'b', 'c']
+    </p>
+
+    <h1>Duyệt tất cả các phần tử trong mảng</h1>
+    <p>Cách cơ bản nhất để duyệt tất cả các phần tử của mảng trong JavaScript là dùng vòng lặp for với chỉ số:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        for (let i = 0; i < letters.length; i++) {
+            console.log(letters[i]);
+        }
+    </p>
+    <p>Kết quả:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        a
+        b
+        c
+    </p>
+    <p>Nếu không quan tâm đến chỉ số, bạn có thể dùng vòng lặp for...of cho ngắn gọn hơn:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        for (let value of letters) {
+            console.log(value);
+        }
+    </p>
+    <p>Ngoài ra, bạn cũng có thể dùng vòng lặp for...in tương tự như cách duyệt tất cả các key trong object:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+
+        for (let key in letters) {
+            console.log(letters[key]);
+        }
+    </p>
+    <p>Cách sử dụng for...in không sai, nhưng có một số vấn đề là:</p>
+    <ul>
+        <li>Cách này không tối ưu cho duyệt mảng nên thường chậm hơn hai cách trên</li>
+        <li>Đối với một số object dạng "array-like", ngoài length và chỉ số ra thì "array-like" còn có thêm một số thuộc tính khác nữa.
+             Việc sử dụng for...in sẽ duyệt hết tất cả các thuộc tính (bao gồm dạng số và không phải dạng số). Điều này là không cần thiết.</li>
+    </ul>
+    <p>Nói chung, không nên sử dụng for...in để duyệt hết tất cả các phần tử của array trong JavaScript.</p>
+
+    <h1>cú pháp new Array()</h1>
+    <p>Đây là một cú pháp khác để khởi tạo array trong JavaScript:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = new Array("a", "b", "c");
+
+        console.log(letters); // (3) ['a', 'b', 'c']
+    </p>
+    <p>Cú pháp trên khởi tạo array với ba phần tử tương tự như sau:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+    </p>
+    <p>Tuy nhiên, việc sử dụng new Array() lại khá ít dùng vì nó chậm và có một trường hợp khó hiểu.</p>
+    <p>Câu lệnh new Array(number) với number là một số, không khởi tạo mảng có 1 phần tử là number mà khởi tạo mảng có number phần tử.</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        // Tham số truyền vào là string
+        let arr1 = new Array("1");
+        console.log(arr1); // ["1"]
+
+        // Tham số truyền vào là số
+        let arr2 = new Array(1);
+        console.log(arr2); // [empty]
+    </p>
+
+    <h1>Thuộc tính length</h1>
+    <p>Thuộc tính length được tự động cập nhật mỗi khi bạn thêm/xóa phần tử trong mảng. Nhưng length không thật sự biểu thị số lượng phần tử trong mảng.</p>
+    <p>Giá trị của length bằng chỉ số lớn nhất trong mảng cộng thêm 1 đơn vị, ví dụ:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let arr = [];
+        arr[1000] = "a";
+        console.log(arr.length); // 1001
+    </p>
+    <p>Thuộc tính length là writable. Nghĩa là có thể thay đổi giá trị của thuộc tính length.</p>
+    <p>Nếu tăng nó lên thì không sao. Nhưng ngược lại, nếu giảm giá trị của length thì mảng sẽ bị cắt ngắn đi:</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let letters = ["a", "b", "c"];
+        console.log(letters.length); // 3
+
+        // giảm length xuống thành 2
+        letters.length = 2;
+        console.log(letters); // (2) ['a', 'b']
+
+        // tăng length thành 5
+        letters.length = 5;
+        console.log(letters[2]); // undefined - giá trị cũ là "c"
+    </p>
+
+    <h2>Xóa phần tử trong mảng bằng length</h2>
+    <p>Các phần tử cuối mảng có thể bị xóa bẳng cách thay đồi thuộc tính length của mảng</p>
+    <p style="white-space: pre-wrap; width: 1000px; background-color: rgb(212, 208, 208);">
+        let arr = [1, 2, 3, 4, 5, 6];
+    
+            arr.length = 4; // set length to remove elements
+            console.log( arr ); // [1, 2, 3, 4]
+    </p>
+
+</body>
+</html>
