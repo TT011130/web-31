@@ -15,12 +15,6 @@
  * bill(100); // 170600
  */
 
-/* Cách làm
- * Bước 1: Khai báo biến cost để giữ kết quả
- * Bước 2: Sử dụng hàm if để đặt điều kiện tính giá điện
- * Bước 3: Đặt công thức tính giá điện trong các hàm if
- * Bước 4: Trả về biến cost
- */
 function bill(kwh){
 	let fee = 0;
 	// dùng if qua các trường hợp
@@ -70,7 +64,7 @@ console.log(bill(401));
   // chuyển tất cả thành second
   // +n
   //chuyển lại thành giờ phút giây
-  // 
+  // In ra chuỗi
 function calcTime (time, n){
     let arr = time.split(":");
     let seconds = (+arr[0]) * 60 * 60 + (+arr[1]) * 60 + (+arr[2]); 
@@ -80,7 +74,7 @@ function calcTime (time, n){
     let s = Math.floor(newSecond % 3600 % 60);
     console.log(`${h}` + `:` + `${m}` + `:` + `${s}`);
 }
-console.log(calcTime("20:30:10", 10));
+calcTime("20:30:10", 10);
 
 
   
